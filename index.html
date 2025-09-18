@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YoCab — Your Ride, Your Way</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta name="description" content="YoCab is a fast, reliable, and affordable ride‑hailing service. Request a ride in seconds — your ride, your way." />
+  <meta name="theme-color" content="#FFD60A" />
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="YoCab — Your Ride, Your Way" />
+  <meta property="og:description" content="Request a safe, affordable ride with YoCab." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yocab.example" />
+  <meta property="og:image" content="/assets/yocab-cover.jpg" />
+  
+  <!-- Preconnects/placeholders for future fonts & styles -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  
+</head>
+<body>
+  <!-- ========================= HEADER ========================= -->
+  <header id="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="YoCab home">
+        <img src="/assets/YoCabFinalLogoVec.png" alt="YoCab logo" />
+      </a>
+
+      <nav id="site-nav" aria-label="Primary" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#request">Request a Ride</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="#request">Request a Ride</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================= HERO ========================= -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid" role="region" aria-roledescription="Hero">
+        <div class="hero-art" aria-hidden="true">
+          <!-- Illustration/graphic placeholder -->
+          <img src="/assets/heroart.png" alt="" />
+        </div>
+
+        <div class="hero-copy">
+          <h1 id="hero-heading">Your Ride, Your Way</h1>
+          <p class="subhead">Safe, reliable and affordable rides across Lesotho — book in seconds.</p>
+
+          <form id="quick-book" action="/request" method="post" aria-describedby="quick-book-help">
+            <fieldset>
+              <legend class="visually-hidden">Quick ride request</legend>
+
+              <label for="pickup">Pickup</label>
+              <input id="pickup" name="pickup" type="text" placeholder="Enter pickup address or landmark" autocomplete="street-address" required />
+
+              <label for="destination">Destination</label>
+              <input id="destination" name="destination" type="text" placeholder="Enter destination" required />
+
+              <div class="field-inline">
+                <label for="ride-type">Ride type</label>
+                <select id="ride-type" name="ride_type" required>
+                  <option value="standard" selected>Standard</option>
+                  <option value="premium">Premium</option>
+                  <option value="xl">XL (Up to 6)</option>
+                </select>
+
+                <label for="pickup-time" class="sr-inline">Time</label>
+                <input id="pickup-time" name="pickup_time" type="datetime-local" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+              <p id="quick-book-help" class="form-help">We’ll confirm your driver details via SMS once matched.</p>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= HOW IT WORKS ========================= -->
+    <section id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <h2 id="hiw-heading">How YoCab Works</h2>
+        <ol class="steps">
+          <li class="step">
+                <i class="fas fa-phone"></i>
+                <h3>Book a Ride</h3>
+                <p>Enter your pickup and destination.</p>
+          </li>
+          <li class="step">
+                <i class="fas fa-car"></i>
+                <h3>Ride</h3>
+                <p>Your nearby driver arrives quickly.</p>
+          </li>
+          <li class="step">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Arrive</h3>
+                <p>Travel safely at an affordable fare.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================= VALUE PROPS ========================= -->
+    <section id="why-yocab" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 id="why-heading">Why Choose YoCab</h2>
+        <div class="cards">
+          <article class="card">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+            <h3>Safety First</h3>
+            <p>Verified drivers, trip sharing and 24/7 support keep you protected.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <i class="fas fa-dollar-sign"></i> 
+            <div>
+            <h3>Affordable Pricing</h3>
+            <p>Transparent fares with no surprises — see price before you book.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+            <h3>Local & Reliable</h3>
+            <p>Built for Lesotho, by locals — we know your routes and needs.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <i class="fas fa-clock"></i>
+            <div>
+            <h3>Anytime, Anywhere</h3>
+            <p>Day or night, city or town — request a ride when you need it.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================= BLOG PREVIEW ========================= -->
+    <section id="blog" aria-labelledby="blog-heading">
+      <div class="container">
+        <h2 id="blog-heading">Ride Tips &amp; Insights</h2>
+        <div class="post-grid">
+          <article class="post">
+            <a href="/blog/safe-ride-checklist" class="post-link">
+              <img src="/assets/passengerentering.jpg" alt="Passenger entering a cab safely" />
+              <h3>Safe Ride Checklist for Every Trip</h3>
+              <p>Verify driver details, share your trip, and more smart habits.</p>
+              <span class="more">Read More</span>
+            </a>
+          </article>
+          <article class="post">
+            <a href="/blog/affordable-commuting" class="post-link">
+              <img src="/assets/affordable.jpg" alt="City commute" />
+              <h3>Smart Ways to Travel Affordably</h3>
+              <p>Peak/off‑peak tips and promo hacks to save on rides.</p>
+              <span class="more">Read More</span>
+            </a>
+          </article>
+          <article class="post">
+            <a href="/blog/guide-to-maseru" class="post-link">
+              <img src="/assets/maseru.jpg" alt="Landmarks in Maseru" />
+              <h3>Your Weekend Guide to Maseru</h3>
+              <p>Local hotspots and routes to make the most of your time.</p>
+              <span class="more">Read More</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= TESTIMONIALS ========================= -->
+    <section id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 id="testimonials-heading">What Riders Say</h2>
+        <ul class="testimonials-list" role="list">
+          <li class="testimonial">
+            <figure>
+              <blockquote>
+                <p>YoCab got me to work on time and the driver was super friendly.</p>
+              </blockquote>
+              <figcaption>
+                <img src="/assets/LineoT.jpg" alt="Photo of Lineo T." class="testimonial-img" />
+                — Lineo T.
+              </figcaption>
+            </figure>
+          </li>
+
+          <li class="testimonial">
+            <figure>
+              <blockquote>
+                <p>Clear pricing and quick pickups — I use it every week.</p>
+              </blockquote>
+              <figcaption>
+                <img src="/assets/ThaboM.jpg" alt="Photo of Thabo M." class="testimonial-img" />
+                — Thabo M.
+              </figcaption>
+            </figure>
+          </li>
+
+          <li class="testimonial">
+            <figure>
+              <blockquote>
+                <p>I feel safe riding at night thanks to trip sharing.</p>
+              </blockquote>
+              <figcaption>
+                <img src="/assets/MamphoK.jpg" alt="Photo of Mampho K." class="testimonial-img" />
+                — Mampho K.
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================= CTA BANNER ========================= -->
+<section id="cta" aria-labelledby="cta-heading" role="region">
+  <div class="cta-inner">
+    <h2 id="cta-heading">Ready to ride?</h2>
+    <p>Book your first trip with YoCab today.</p>
+    <a class="cta-btn" href="#request">Request a Ride</a>
+  </div>
+</section>
+
+
+    <!-- ========================= FULL REQUEST SECTION ========================= -->
+    <section id="request" aria-labelledby="request-heading">
+      <div class="container">
+        <h2 id="request-heading">Request a Ride</h2>
+        <form id="request-form" action="/request" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name</label>
+            <input id="full-name" name="full_name" type="text" placeholder="Your full name" autocomplete="name" required />
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="e.g. +266 63 123 456" autocomplete="tel" required />
+
+            <label for="email">Email (optional)</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Pickup Details</legend>
+            <label for="pickup-address">Pickup Address</label>
+            <input id="pickup-address" name="pickup_address" type="text" placeholder="Address or landmark" required />
+
+            <label for="pickup-notes">Pickup Notes (optional)</label>
+            <textarea id="pickup-notes" name="pickup_notes" rows="3" placeholder="Gate code, landmark, etc."></textarea>
+
+            <label for="when">Pickup Time</label>
+            <input id="when" name="pickup_time" type="datetime-local" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Destination Details</legend>
+            <label for="dest-address">Destination</label>
+            <input id="dest-address" name="dest_address" type="text" placeholder="Address or landmark" required />
+
+            <label for="ride-class">Ride Type</label>
+            <select id="ride-class" name="ride_class" required>
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+              <option value="xl">XL (Up to 6)</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Confirmation</legend>
+            <label class="checkbox">
+              <input type="checkbox" name="tos" required />
+              <span>I agree to the <a href="#" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="#" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+            </label>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= SUPPORT / CONTACT / FOOTER ========================= -->
+<section id="support" aria-labelledby="support-heading">
+  <div class="container">
+    <h2 id="support-heading">Support &amp; FAQ</h2>
+    <p class="intro">
+      We’re here to help! Below are some common questions to make your rides with YoCab smooth and stress-free.
+    </p>
+
+    <div class="faq">
+      <details class="faq-item">
+        <summary><i class="fas fa-calculator"></i> How are fares calculated?</summary>
+        <p>Fares are based on distance, time, and demand. You’ll always see an upfront estimate before confirming your ride, so there are no surprises.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><i class="fas fa-clock"></i> Is YoCab available 24/7?</summary>
+        <p>Yes, YoCab operates day and night in supported areas, so you can request a ride whenever you need one.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><i class="fas fa-share-alt"></i> How do I share my trip?</summary>
+        <p>After booking, you’ll get a secure link via SMS to share with family or friends so they can track your trip in real time.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><i class="fas fa-shield-alt"></i> How does YoCab ensure my safety?</summary>
+        <p>All drivers undergo background checks and vehicle inspections. You can also share your trip live and access 24/7 support within the app.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><i class="fas fa-ban"></i> What if I need to cancel a ride?</summary>
+        <p>You can cancel anytime before your driver arrives. A small cancellation fee may apply if the driver is already close by.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><i class="fas fa-credit-card"></i> What payment options do you accept?</summary>
+        <p>We accept cash, credit/debit cards, and mobile wallets. You can manage your payment methods easily in your account settings.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><i class="fas fa-user-check"></i> How do I know my driver is trustworthy?</summary>
+        <p>You’ll see your driver’s name, photo, rating, and vehicle details before pickup. Only approved drivers with verified credentials can drive with YoCab.</p>
+      </details>
+    </div>
+
+    <div class="support-cta">
+      <p>Still have questions? Our support team is here to help.</p>
+      <a href="#contact" class="btn btn-primary"><i class="fas fa-headset"></i> Contact Support</a>
+    </div>
+  </div>
+</section>
+     
+
+  <footer id="contact" role="contentinfo">
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img src="/assets/YoCabFinalLogoVec.png" alt="YoCab" width="40" height="40" />
+        <p>YoCab — Your Ride, Your Way.</p>
+      </section>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#request">Request a Ride</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </nav>
+      <address class="footer-contact">
+        <p><strong>Contact:</strong> <a href="mailto:support@yocab.com">support@yocab.com</a> <strong>-</strong> <a href="tel:+26663123456">+266 58 153 847</a></p>
+        <p><small>&copy; <span id="year">2025</span> YoCab. All rights reserved.</small></p>
+      </address>
+    </div>
+  </footer>
+
+  <!-- Optional helper script to set current year (can be removed) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
