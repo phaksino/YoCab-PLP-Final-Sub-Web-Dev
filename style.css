@@ -218,7 +218,7 @@ a:hover {
   padding: 3rem 0;
   background: #f9f9f9;
   text-align: center;
-  height: 60vh;
+  min-height: 60vh;
 }
 
 #hiw-heading {
@@ -277,7 +277,7 @@ a:hover {
 #why-yocab {
   padding: 3rem 0;
   text-align: center;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 #why-heading {
@@ -849,3 +849,4 @@ button.clicked {
   transform: scale(0.95);
   transition: transform 0.2s ease;
 }
+
